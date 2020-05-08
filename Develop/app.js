@@ -99,14 +99,12 @@ async function init() {
     employees.push(new Manager(managerData.name, managerData.id, managerData.email, managerData.office))
     //Add team members
     let { newmember } = await promptUser(createNewQuestion)
-    console.log(newmember)
     while (newmember === "Yes") {
         let employee = await createTeamMember()
         employees.push(employee)
         let next = await promptUser(createNewQuestion)
         newmember = next.newmember
     }
-    console.log(employees)
     const html = render(employees)
     fs.writeFile(outputPath, html, (err) => {
         if (err) throw err;

@@ -2,15 +2,15 @@
 ## Link
 https://github.com/julieritz/Template-Engine
 ## Description
-This template engine helps the user create an html page to keep track of information on everyone on their team. The team is led by one managern. The user can add as many engineers and interns as they like after that.
+This template engine helps the user create an html page to keep track of information of everyone on their team. The team is led by one manager. The user can add as many engineers and interns as they like after that.
 
 This app is structured by:
-- Requiring in js files, path and fs
-- Creating a place for the html file to be stored
-- Using inquirer and several arrays/objects to store questions for each type of user
-- An async function to get manager info and add new team members
-- An async function to get the data of the new team members
-- Push the data collected to an html file stored in the output folder
+- Requiring in js files, path and fs.
+- Creating a place for the html file to be stored.
+- Using inquirer and several arrays/objects to store questions for each type of user.
+- An async function to get manager info and add new team members.
+- An async function to get the data of the new team members.
+- Push the data collected to an html file stored in the output folder.
 ## Table of Contents
 * [Installation](#installation)
 
