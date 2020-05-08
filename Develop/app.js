@@ -10,6 +10,24 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+const firstQuestions = [
+    {
+        type: "input",
+        message: "Enter the manager's first name:",
+        name: "name"
+    },
+    {
+        type: "input",
+        message: "Enter their email address:",
+        name: "email"
+    },
+    {
+        type: "input",
+        message: "Enter their employee ID:",
+        name: "id"
+    },
+]
+
 const initialQuestions = [
     {
         type: "input",
@@ -77,7 +95,7 @@ const createNewQuestion = [
 async function init() {
     const employees = [];
     //Get info about manager
-    const managerData = await promptUser([...initialQuestions, ...managerQuestion])
+    const managerData = await promptUser([...firstQuestions, ...managerQuestion])
     employees.push(new Manager(managerData))
     //Add team members
     let { newmember } = await promptUser(createNewQuestion)
@@ -90,11 +108,10 @@ async function init() {
     }
     console.log(employees)
     const html = render(employees)
-    fs.writeFile("team.html", html, (err) => {
+    fs.writeFile("../output/team.html", html, (err) => {
         if (err) throw err;
         console.log("The file has been saved!");
     });
-    // console.log(html) //create html file here with fs
 }
 
 async function createTeamMember() {
