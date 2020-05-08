@@ -35,3 +35,6 @@ Julie Ritz
 Located in the "test" folder. Will check against employee and each extended type thereafter to make sure data is being pulled in the correct manner.
 ## Questions
 Reach out to me if you have any questions!
+
+![image](https://user-images.githubusercontent.com/60047114/81443753-dbc50e80-912a-11ea-823d-a1a20492f2a2.png)
+![image](https://user-images.githubusercontent.com/60047114/81443788-eed7de80-912a-11ea-84c6-849e6f0def6a.png)
