@@ -108,7 +108,7 @@ async function init() {
     }
     console.log(employees)
     const html = render(employees)
-    fs.writeFile("../output/team.html", html, (err) => {
+    fs.writeFile(outputPath, html, (err) => {
         if (err) throw err;
         console.log("The file has been saved!");
     });
