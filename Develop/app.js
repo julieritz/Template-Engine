@@ -96,7 +96,7 @@ async function init() {
     const employees = [];
     //Get info about manager
     const managerData = await promptUser([...firstQuestions, ...managerQuestion])
-    employees.push(new Manager(managerData))
+    employees.push(new Manager(managerData.name, managerData.id, managerData.email, managerData.office))
     //Add team members
     let { newmember } = await promptUser(createNewQuestion)
     console.log(newmember)
@@ -120,12 +120,12 @@ async function createTeamMember() {
         case "intern": {
             let { school } = await promptUser(internQuestion)
             newMember.school = school
-            return new Intern(newMember)
+            return new Intern(newMember.name, newMember.id, newMember.email, newMember.school)
         }
         case "engineer": {
             let { github } = await promptUser(engineerQuestion)
             newMember.github = github
-            return new Engineer(newMember)
+            return new Engineer(newMember.name, newMember.id, newMember.email, newMember.github)
         }
     }
 }

@@ -16,6 +16,9 @@ class Employee {
     getId() {
         return this.id;
     }
+    getRole() {
+        return "Employee";
+    }
 }
 
 module.exports = Employee;
